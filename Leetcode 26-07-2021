@@ -1,0 +1,28 @@
+class Solution {
+    public static  int trailingZeroes(int n) {
+        int fives=0;
+        for(int i=5;i<=n;i+=5)
+        {
+            int x=i;
+            while(x>0 && x%5==0)
+            {
+                ++fives;
+                x/=5;
+            }
+        }
+        return fives;
+    }
+    
+  public static void main(String args[])
+    {      
+    System.out.println(trailingZeroes(5));
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OUTPUT:
+Your input
+3
+Output
+0
+Expected
+0
